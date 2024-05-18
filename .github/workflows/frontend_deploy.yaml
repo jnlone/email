@@ -35,7 +35,7 @@ jobs:
           echo "${{ secrets.FRONTEND_ENV }}" > .env.prod
           export project_name=${{ secrets.FRONTEND_NAME }}
           pnpm install --no-frozen-lockfile
-          pnpm run deploy --project-name=$project_name
+          pnpm run deploy --project-name=cloudflare_temp_email
           echo "Deploying prodcution for ${{ github.ref_name }}"
           echo "Deployed for tag ${{ github.ref_name }}"
         env:
